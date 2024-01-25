@@ -11,8 +11,7 @@ search.addEventListener('click', () => {
     if (city == '')
     return;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&
-    appid=${APIKey}`).then(response => response.json()).then(json => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then(response => response.json()).then(json => {
         const image = document.querySelector('.weather-box img');
         const temperature = document.querySelector('.weather-box .temperature');
         const description = document.querySelector('.weather-box .description');
